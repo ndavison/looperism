@@ -1,0 +1,45 @@
+.form-control {
+    height: auto;
+}
+
+div.row {
+    padding: 10px 0px 10px 0px;
+}
+
+.navbar-inverse {
+    background-image: none;
+    background-color: #32194E;
+}
+
+div#view-loops button {
+    margin: 0px 10px 10px 0px;
+}
+
+p#signin-msg {
+    margin-right: 20px;
+}
+
+.navbar {
+    border-radius: 0;
+}
+button {
+    cursor: pointer;
+}
+
+input#pitch-range {
+    height: 33px;
+}
+
+div#credit {
+    position: fixed;
+    padding: 12px;
+    bottom: 0px;
+    right: 0px;
+    opacity: 0.3;
+    transition: opacity 2s ease-out;
+}
+
+div#credit:hover {
+    opacity: 1;
+    transition: opacity 2s ease-out;
+}

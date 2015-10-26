@@ -1,0 +1,11 @@
+<template name="account">
+    {{#unless isAuthenticated}}
+    <button id="auth-btn" type="button" class="btn btn-info navbar-btn pull-right">
+        <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Sign in
+    </button>
+    {{else}}
+    <button id="signout-btn" type="button" class="btn btn-info navbar-btn pull-right">
+        <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Sign out
+    </button>
+    {{/unless}}
+</template>

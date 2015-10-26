@@ -1,0 +1,7 @@
+<template name="loops">
+    {{#each loops}}
+    <button type="button" class="loop-button btn btn-default" data-loopfileid="{{ loopFileId }}">
+        <span class="glyphicon glyphicon-play" aria-hidden="true"></span> <span class="loop-name">{{ name }}</span>
+    </button>
+    {{/each}}
+</template>

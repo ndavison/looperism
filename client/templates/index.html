@@ -1,0 +1,50 @@
+<head>
+    <title>Looperism</title>
+    <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="zr16qymzqg21hzf"></script>
+</head>
+<body>
+    <nav id="view-navbar" class="navbar navbar-inverse">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6 navbar-header">
+                  <a href="/"><img src="images/looper-logo-sm.png" alt="Looper logo"></a>
+                </div>
+                <div class="text-right col-xs-6" id="navbar-buttons">{{> account}}</div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div id="view-menu">
+            <div class="row">
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#" data-bodyview="createform">Create a Looper</a></li>
+                  <li><a href="#" data-bodyview="findlooper">Find a Looper</a></li>
+                </ul>
+            </div>
+            <div id="view-body">{{> create_form}}</div>
+        </div>
+        <div class="row">
+            <div id="view-controls" class="col-sm-12"></div>
+        </div>
+        <div class="row">
+            <div id="view-alerts" class="col-sm-12"></div>
+        </div>
+        <div id="view-loops">
+            <div class="row ">
+                <div id="loops-buttons" class="col-sm-12">{{> loops}}</div>
+            </div>
+            <div class="row">
+                <div id="loops-saveform"></div>
+            </div>
+            <div class="row">
+                <div id="looper-copyform"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="view-status" class="col-md-12"></div>
+        </div>
+        <div id="credit">
+            by <a href="http://www.nathandavison.com">nathan d</a>
+        </div>
+    </div>
+</body>
