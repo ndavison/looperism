@@ -5,7 +5,19 @@ Template.loops.helpers({
      * looper.
      */
     loops: function() {
-        return Session.get('loop-files');
+        
+        var fromDropbox = Session.get('loop-files-dropbox');
+        var fromForm = Session.get('loop-files-form');
+        
+        var allLoops = [];
+        if (fromDropbox) {
+            allLoops = allLoops.concat(fromDropbox);
+        }
+        if (fromForm) {
+            allLoops = allLoops.concat(fromForm);
+        }
+        
+        return allLoops;
     }
     
 });

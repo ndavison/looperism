@@ -1,6 +1,6 @@
 
 /**
- * The store for this session's looper files
+ * The store for this session's looper files from Dropbox.
  */
 var loopFiles = [];
 
@@ -21,7 +21,7 @@ Template.load_from_dropbox.events({
                     var fileMatches = file.name.match(/\.(.*)$/);
                     var fileExtension = fileMatches && fileMatches[1] ? fileMatches[1] : '';
                     loopFiles.push({name: '', dropboxURL: file.link, fileExtension: fileExtension});
-                    Session.set('loop-files', loopFiles);
+                    Session.set('loop-files-dropbox', loopFiles);
                 }
             }
         }});
