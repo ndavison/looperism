@@ -1,0 +1,16 @@
+<template name="loop_area">
+{{> create_form parent=getSelf}}
+<div id="view-loops">
+    <div class="row">
+        <div id="loop-loading" class="col-sm-12">{{> loop_loading isLoadingLoop=isLoadingLoop parent=getSelf}}</div>
+        <div id="loops-buttons" class="col-sm-12">{{> loops loopFiles=getLoops parent=getSelf}}</div>
+        <div id="loop-delete" class="col-sm-12">{{> loop_deleting isRemovingLoop=isRemovingLoop parent=getSelf}}</div>
+    </div>
+    <div class="row">
+        <div id="loops-saveform"></div>
+    </div>
+    <div class="row">
+        <div id="looper-copyform"></div>
+    </div>
+</div>
+</template>
