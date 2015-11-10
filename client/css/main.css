@@ -43,3 +43,15 @@ div#credit:hover {
     opacity: 1;
     transition: opacity 2s ease-out;
 }
+
+div#loop-delete div {
+    width: 100%;
+    padding: 20px;
+    background: #F2DEDE;
+    border: 5px dotted #DCA7A7;
+    color: #DCA7A7;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+}
