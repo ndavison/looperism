@@ -1,7 +1,9 @@
 <template name="loops">
-    {{#each loops}}
-    <button type="button" class="loop-button btn btn-default" data-loopfileid="{{ loopFileId }}">
-        <span class="glyphicon glyphicon-play" aria-hidden="true"></span> <span class="loop-name">{{ name }}</span>
+    {{#each loopFiles}}
+    {{#if loopFileId}}
+    <button type="button" draggable="true" class="loop-button btn btn-default" data-loopfileid="{{loopFileId}}">
+        <span class="glyphicon glyphicon-play" aria-hidden="true"></span> <span class="loop-name">{{inc @index}}</span>
     </button>
+    {{/if}}
     {{/each}}
 </template>
