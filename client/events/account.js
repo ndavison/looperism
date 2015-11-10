@@ -5,12 +5,12 @@ Template.account.events({
      */
     'click #auth-btn': function(ev) {
         ev.preventDefault();
-        DropboxClient.authenticate({}, function(error, client) {
-            console.log(error);
+        dropboxClient.authenticate({}, function(error, client) {
+            if (error) console.log(error);
             if (client.isAuthenticated()) {
                 Session.set('isAuthenticated', true);
-                DropboxClient.getUserInfo(function(error, userInfo) {
-                    console.log(error);
+                dropboxClient.getUserInfo(function(error, userInfo) {
+                    if (error) console.log(error);
                     if (userInfo) {
                         Session.set('userInfo', userInfo);
                     }
@@ -24,7 +24,7 @@ Template.account.events({
      */
     'click #signout-btn': function(ev) {
         ev.preventDefault();
-        DropboxClient.signOut();
+        dropboxClient.signOut();
         Session.set('isAuthenticated', false);
     }
     
