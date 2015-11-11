@@ -1,0 +1,20 @@
+<template name="looper_save">
+    {{#if hasLoopsLoaded}}
+    <form id="save-loops-form">
+    {{#if isAuthenticated}}
+        <div class="col-xs-6">
+            <input type="text" class="form-control" name="looper-name" placeholder="Looper Name">
+        </div>
+        <div class="col-xs-3">
+            <button type="submit" id="save-loops" class="btn btn-primary">
+                <span class="glyphicon glyphicon-cloud" aria-hidden="true"></span> Save Looper
+            </button>
+        </div>
+    {{else}}
+        <div class="col-xs-12">
+            <p>You must be signed into Dropbox to save the looper!</p>
+        </div>
+    {{/if}}
+    </form>
+    {{/if}}
+</template>

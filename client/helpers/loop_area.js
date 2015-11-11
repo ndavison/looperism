@@ -74,6 +74,21 @@ Template.loop_area.helpers({
     },
     
     /**
+     * Returns whether 
+     */
+    hasLoopsLoaded: function() {
+        var hasLoopsLoaded = false;
+        var loops = Template.instance().loopFiles.get();
+        for (var prop in loops) {
+            if (loops[prop] && loops[prop].loopFileId) {
+                hasLoopsLoaded = true;
+                break;
+            }
+        }
+        return hasLoopsLoaded;
+    },
+    
+    /**
      * Returns the template instance.
      */
     getSelf: function() {
